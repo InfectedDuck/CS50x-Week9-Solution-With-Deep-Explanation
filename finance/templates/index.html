@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h1>Stocks Owned</h1>
+    <div class="container">
+        <div class="table-container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Total Cost</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in stocks %}
+                    <tr>
+                        <td>{{ stock.id }}</td>
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ stock.price | usd }}</td>
+                        <td>{{ stock.total_cost | usd }}</td>
+                        <td>
+                            <form action="/sell" method="POST" style="display:inline;">
+                                <input type="hidden" name="symbol" value="{{ stock.symbol }}">
+                                <input type="number" name="shares" min="1" max="{{ stock.shares }}" required>
+                                <button type="submit">Sell stock</button>
+                            </form>
+                            <form action="/buy" method="POST" style="display:inline;">
+                                <input type="hidden" name="symbol" value="{{ stock.symbol }}">
+                                <input type="number" name="shares" min="1" required>
+                                <button type="submit">Buy stock</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p>Current Balance: {{ cash | usd }}</p>
+    <p>Total Value of stocks and cash: {{ total_net_worth | usd }}</p>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Show quote
+{% endblock %}
+
+{% block main %}
+    <h1>Stock quote</h1>
+    <p>Symbol: {{ symbol }}</p>
+    <p>Price: {{ price }}</p>
+    <a href='/'>Go back</a>
+{% endblock %}
