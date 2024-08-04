@@ -1,83 +1,93 @@
 body {
-    background-color: #fff;
-    color: #212529;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
+    background-color: #fff; /* Sets the background color of the page to white */
+    color: #212529; /* Sets the text color to a dark shade for better readability */
+    font-size: 1rem; /* Sets the base font size to 1 rem, which is relative to the root font size */
+    font-weight: 400; /* Sets the font weight to normal */
+    line-height: 1.5; /* Increases the line height to improve text readability */
+    margin: 0; /* Removes default margin around the body */
+    text-align: left; /* Aligns text to the left */
 }
 
+/* Container styling for centering and padding content */
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    width: 90%;
+    margin-left: auto; /* Centers the container horizontally by setting left margin to auto */
+    margin-right: auto; /* Centers the container horizontally by setting right margin to auto */
+    padding-left: 15px; /* Adds padding to the left side of the container */
+    padding-right: 15px; /* Adds padding to the right side of the container */
+    text-align: center; /* Centers text inside the container */
+    width: 90%; /* Sets the width of the container to 90% of its parent element */
 }
 
+/* Styling for header sections */
 .header {
-    background-color: #477bff;
-    color: #fff;
-    margin-bottom: 2rem;
-    padding: 2rem 1rem;
-    text-align: center;
+    background-color: #477bff; /* Sets a blue background color for the header */
+    color: #fff; /* Sets the text color in the header to white */
+    margin-bottom: 2rem; /* Adds a margin below the header */
+    padding: 2rem 1rem; /* Adds padding inside the header (top/bottom 2rem, left/right 1rem) */
+    text-align: center; /* Centers text inside the header */
 }
 
+/* Styling for sections */
 .section {
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
+    padding-bottom: 1rem; /* Adds padding to the bottom of sections */
+    padding-left: 2rem; /* Adds padding to the left side of sections */
+    padding-right: 2rem; /* Adds padding to the right side of sections */
+    padding-top: 0.5rem; /* Adds padding to the top of sections */
 }
 
+/* Styling for section hover effects */
 .section:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+    background-color: #f5f5f5; /* Changes the background color to a light gray when hovered */
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out; /* Smooth transitions for color and background-color changes */
 }
 
+/* Styling for heading elements */
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
+    font-family: 'Montserrat', sans-serif; /* Sets the font family to Montserrat with a fallback to sans-serif */
+    font-size: 48px; /* Sets the font size for headings */
 }
 
+/* Styling for buttons and submit inputs */
 button, input[type="submit"] {
-    background-color: #d9edff;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0.375rem 0.75rem;
-    text-align: center;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    vertical-align: middle;
+    background-color: #d9edff; /* Sets a light blue background color */
+    border: 1px solid transparent; /* Removes the default border */
+    border-radius: 0.25rem; /* Rounds the corners of the button */
+    font-size: 0.95rem; /* Sets the font size slightly smaller than the base font size */
+    font-weight: 400; /* Sets the font weight to normal */
+    line-height: 1.5; /* Increases line height for readability */
+    padding: 0.375rem 0.75rem; /* Adds padding inside the button (top/bottom 0.375rem, left/right 0.75rem) */
+    text-align: center; /* Centers the text inside the button */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transitions for color, background-color, border-color, and box-shadow changes */
+    vertical-align: middle; /* Vertically aligns the button with surrounding text */
 }
 
+/* Styling for text and number input fields */
 input[type="text"], input[type="number"] {
-    line-height: 1.8;
-    width: 25%;
+    line-height: 1.8; /* Increases line height inside the input fields */
+    width: 25%; /* Sets the width of the input fields to 25% of the parent container */
 }
 
+/* Styling for input fields on hover */
 input[type="text"]:hover, input[type="number"]:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+    background-color: #f5f5f5; /* Changes the background color to light gray when hovered */
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out; /* Smooth transitions for color and background-color changes */
 }
 
+/* Styling for tables */
 table {
-    background-color: transparent;
-    margin-bottom: 1rem;
-    width: 100%;
+    background-color: transparent; /* Sets the background color of tables to transparent */
+    margin-bottom: 1rem; /* Adds a margin below the table */
+    width: 100%; /* Sets the table width to 100% of the parent container */
 }
 
+/* Styling for table header and data cells */
 table th,
 table td {
-    padding: 0.75rem;
-    vertical-align: middle;
+    padding: 0.75rem; /* Adds padding inside table header and data cells */
+    vertical-align: middle; /* Vertically aligns content in the middle of cells */
 }
 
+/* Styling for odd rows in table body */
 tbody tr:nth-of-type(odd) {
-    background-color: rgb(179, 208, 255, 0.3)
+    background-color: rgb(179, 208, 255, 0.3); /* Sets a light blue background color with some transparency for odd rows */
 }
-
