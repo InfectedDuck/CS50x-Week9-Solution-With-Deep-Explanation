@@ -5,8 +5,33 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Main heading for the page -->
     <h1>Stock quote</h1>
-    <p>Symbol: {{ symbol }}</p>
-    <p>Price: {{ price }}</p>
-    <a href='/'>Go back</a>
+    
+    <!-- Display the stock symbol -->
+    <p>
+        <!-- 
+            The {{ symbol }} variable is expected to contain the stock symbol.
+            This will be inserted here to show which stock's quote is being displayed.
+        -->
+        Symbol: {{ symbol }}
+    </p>
+    
+    <!-- Display the stock price -->
+    <p>
+        <!-- 
+            The {{ price }} variable is expected to contain the stock price.
+            This will be inserted here to show the current price of the stock.
+        -->
+        Price: {{ price }}
+    </p>
+    
+    <!-- Link to return to the home page -->
+    <a href='/'>
+        <!-- 
+            The href attribute is set to '/' which is the URL for the home page.
+            Clicking this link will navigate the user back to the home page.
+        -->
+        Go back
+    </a>
 {% endblock %}
