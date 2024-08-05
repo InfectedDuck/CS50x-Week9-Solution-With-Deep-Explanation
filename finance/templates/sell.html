@@ -5,19 +5,37 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Form for selling stocks -->
     <form action="/sell" method="post">
+        <!-- Dropdown for selecting the stock symbol -->
         <div class="mb-3">
             <label for="symbol">Symbol</label>
             <select name="symbol" id="symbol" class="form-control" required>
+                <!-- Placeholder option -->
                 <option value="" disabled selected>Choose a stock</option>
-                {%for stock in stocks%}
-                    <option value="{{stock}}">{{stock}}</option>
-                {%endfor%}
+                <!-- Loop through stocks to create options -->
+                {% for stock in stocks %}
+                    <option value="{{ stock }}">{{ stock }}</option>
+                {% endfor %}
             </select>
         </div>
+        
+        <!-- Input for entering the number of shares to sell -->
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Number of shares:" type="number">
+            <!-- 
+                'name="shares"' allows the backend to identify the input.
+                'autocomplete="off"' prevents browser auto-suggestions.
+                'autofocus' automatically focuses on this input field when the page loads.
+                'type="number"' ensures only numerical values are entered, making it suitable for share quantities.
+            -->
         </div>
+        
+        <!-- Submit button for the form -->
         <button class="btn btn-primary" type="submit">Sell stock</button>
+        <!-- 
+            'type="submit"' makes this button submit the form data.
+            'btn btn-primary' applies Bootstrap styling for a visually appealing button.
+        -->
     </form>
 {% endblock %}
