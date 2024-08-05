@@ -5,27 +5,35 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Main heading for the page, indicating that this page shows stocks owned by the user -->
     <h1>Stocks Owned</h1>
+
+    <!-- Table to display stock transaction details -->
     <table class="table table-striped">
+        <!-- Table header section -->
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Symbol</th>
-                <th>Shares</th>
-                <th>Price</th>
-                <th>Total Cost</th>
-                <th>action</th>
+                <!-- Column headers for the table -->
+                <th>ID</th> <!-- Unique identifier for each transaction -->
+                <th>Symbol</th> <!-- Stock ticker symbol (e.g., AAPL for Apple) -->
+                <th>Shares</th> <!-- Number of shares in the transaction -->
+                <th>Price</th> <!-- Price per share at the time of transaction -->
+                <th>Total Cost</th> <!-- Total cost of the transaction (shares * price) -->
+                <th>Action</th> <!-- Action performed (buy/sell) -->
             </tr>
         </thead>
+        <!-- Table body section where transaction data will be displayed -->
         <tbody>
+            <!-- Loop through each transaction item in the transactions list -->
             {% for transaction in transactions %}
             <tr>
-                <td>{{ transaction.id }}</td>
-                <td>{{ transaction.symbol }}</td>
-                <td>{{ transaction.shares }}</td>
-                <td>{{ transaction.price }}</td>
-                <td>{{ transaction.total_cost }}</td>
-                <td>{{ transaction.action }}</td>
+                <!-- Displaying each attribute of the transaction in the table row -->
+                <td>{{ transaction.id }}</td> <!-- Transaction ID -->
+                <td>{{ transaction.symbol }}</td> <!-- Stock symbol -->
+                <td>{{ transaction.shares }}</td> <!-- Number of shares -->
+                <td>{{ transaction.price }}</td> <!-- Price per share -->
+                <td>{{ transaction.total_cost }}</td> <!-- Total cost of the transaction -->
+                <td>{{ transaction.action }}</td> <!-- Action taken (buy/sell) -->
             </tr>
             {% endfor %}
         </tbody>
