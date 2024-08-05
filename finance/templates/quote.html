@@ -5,10 +5,22 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Form to request a stock quote -->
     <form action="/quote" method="post">
+        <!-- Input field for the stock symbol -->
         <div class="mb-3">
+            <!-- 
+                autocomplete="off" prevents the browser from suggesting or autofilling previously entered stock symbols.
+                autofocus places the cursor in this field automatically when the page loads.
+                class="form-control mx-auto w-auto" applies Bootstrap styles to the input field:
+                - form-control: Adds Bootstrap's default styling to the input field.
+                - mx-auto: Centers the input field horizontally within its container.
+                - w-auto: Adjusts the width of the input field based on its content.
+            -->
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol:" type="text">
         </div>
+        
+        <!-- Submit button to send the form data -->
         <button class="btn btn-primary" type="submit">Get quote</button>
     </form>
 {% endblock %}
