@@ -5,16 +5,44 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Form for user registration -->
     <form action="/register" method="post">
+        <!-- Username input field -->
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+            <!-- 
+                The 'name' attribute is 'username' which is used by the backend to identify the input.
+                The 'placeholder' attribute provides a hint to the user about the expected input.
+                'autocomplete="off"' prevents the browser from suggesting previously entered usernames.
+                'autofocus' makes this field automatically focused when the page loads.
+            -->
         </div>
+        
+        <!-- Password input field -->
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+            <!-- 
+                The 'name' attribute is 'password' which is used by the backend to identify the input.
+                The 'placeholder' attribute provides a hint to the user about the expected input.
+                'type="password"' ensures that the entered text is masked for privacy.
+            -->
         </div>
+        
+        <!-- Password confirmation input field -->
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Repeat the password" type="password">
+            <!-- 
+                The 'name' attribute is 'confirmation' which is used by the backend to identify the input.
+                The 'placeholder' attribute provides a hint to the user about the expected input.
+                This field is used to confirm that the user has entered the correct password.
+            -->
         </div>
+        
+        <!-- Submit button -->
         <button class="btn btn-primary" type="submit">Register</button>
+        <!-- 
+            The 'type="submit"' makes this button submit the form data to the server.
+            'btn btn-primary' applies Bootstrap styling to the button, making it visually appealing.
+        -->
     </form>
 {% endblock %}
