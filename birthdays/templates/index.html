@@ -1,46 +1,78 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
+        <!-- Link to Google Fonts to include the Montserrat font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        
+        <!-- Link to the CSS stylesheet for styling the page -->
         <link href="/static/styles.css" rel="stylesheet">
+        
+        <!-- Title of the webpage -->
         <title>Birthdays</title>
     </head>
     <body>
+        <!-- Header section of the page -->
         <div class="header">
+            <!-- Main heading for the page -->
             <h1>Birthdays</h1>
         </div>
+        
+        <!-- Container for the main content of the page -->
         <div class="container">
+            
+            <!-- Section for adding a new birthday -->
             <div class="section">
-
+                <!-- Subheading for the form -->
                 <h2>Add a Birthday</h2>
-                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
-                 <form action="/" method="POST">
+                
+                <!-- Form to add a new birthday -->
+                <!-- The form uses POST method to submit data to the server -->
+                <!-- The action attribute points to the root URL ("/") -->
+                <form action="/" method="POST">
+                    <!-- Input field for the name -->
+                    <!-- Placeholder text indicates what should be entered -->
                     <input type="text" id="name" name="name" placeholder="Name">
+                    
+                    <!-- Input field for the month -->
+                    <!-- Restricts input to numbers between 1 and 12 -->
                     <input type="number" id="month" name="month" min="1" max="12" placeholder="Month">
+                    
+                    <!-- Input field for the day -->
+                    <!-- Restricts input to numbers between 1 and 31 -->
                     <input type="number" id="day" name="day" min="1" max="31" placeholder="Day">
+                    
+                    <!-- Submit button to send the form data -->
                     <input type="submit" value="Add Birthday">
-                 </form>
+                </form>
             </div>
 
+            <!-- Section for displaying all birthdays -->
             <div class="section">
-
+                <!-- Subheading for the table of birthdays -->
                 <h2>All Birthdays</h2>
+                
+                <!-- Table to display the list of birthdays -->
                 <table>
+                    <!-- Table header row -->
                     <thead>
                         <tr>
+                            <!-- Column headers for Name and Birthday -->
                             <th>Name</th>
                             <th>Birthday</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Loop through the 'birthdays' variable passed from Flask -->
+                        <!-- Display each entry as a table row -->
                         {% for row in birthdays %}
                         <tr>
+                            <!-- Display the name from the database entry -->
                             <td>{{ row.name }}</td>
+                            <!-- Display the month and day from the database entry in MM/DD format -->
                             <td>{{ row.month }}/{{ row.day }}</td>
                         </tr>
                         {% endfor %}
-                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        <!-- TODO: The loop above dynamically generates rows based on database entries -->
                     </tbody>
                 </table>
             </div>
