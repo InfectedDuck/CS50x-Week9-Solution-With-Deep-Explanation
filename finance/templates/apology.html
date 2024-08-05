@@ -5,7 +5,14 @@
 {% endblock %}
 
 {% block main %}
-    <!-- https://memegen.link/ -->
-    <!-- https://knowyourmeme.com/memes/grumpy-cat -->
-    <img alt="{{ top }}" class="border img-fluid" src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https://i.imgur.com/CsCgN7Ll.png&width=400" title="{{ top }}">
+    <!-- Render a meme image with a custom apology message -->
+    <!-- The URL for the image is dynamically generated using the provided 'top' and 'bottom' text -->
+
+    <!-- Link to meme generator and meme example:
+         - https://memegen.link/ (Meme generator site)
+         - https://knowyourmeme.com/memes/grumpy-cat (Grumpy Cat meme example)
+    -->
+    <img alt="{{ top }}" class="border img-fluid" 
+         src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https://i.imgur.com/CsCgN7Ll.png&width=400" 
+         title="{{ top }}">
 {% endblock %}
