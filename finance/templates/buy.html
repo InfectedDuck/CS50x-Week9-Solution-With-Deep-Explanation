@@ -5,13 +5,45 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Form for buying stock -->
+    <!-- The form will submit data to the /buy endpoint via POST method -->
+
     <form action="/buy" method="post">
+        <!-- Input field for stock symbol -->
         <div class="mb-3">
+            <!-- 
+                The `autocomplete="off"` attribute prevents the browser from suggesting 
+                previously entered values for the input field.
+                The `autofocus` attribute automatically focuses on this input field when the page loads.
+                The `class="form-control mx-auto w-auto"` applies Bootstrap styling:
+                - `form-control`: Styles the input with Bootstrap's default form control styling.
+                - `mx-auto`: Centers the input horizontally within its container.
+                - `w-auto`: Allows the input to size itself according to its content.
+                The `name="symbol"` attribute associates this input with the `symbol` field in the form data.
+                The `placeholder="Symbol:"` text is shown inside the input field as a hint to the user.
+                The `type="text"` specifies that this input field accepts text input.
+            -->
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol:" type="text">
         </div>
+
+        <!-- Input field for number of shares -->
         <div class="mb-3">
+            <!-- 
+                The `autocomplete="off"` attribute prevents the browser from suggesting 
+                previously entered values for the input field.
+                The `autofocus` attribute automatically focuses on this input field when the page loads.
+                The `class="form-control mx-auto w-auto"` applies Bootstrap styling:
+                - `form-control`: Styles the input with Bootstrap's default form control styling.
+                - `mx-auto`: Centers the input horizontally within its container.
+                - `w-auto`: Allows the input to size itself according to its content.
+                The `name="shares"` attribute associates this input with the `shares` field in the form data.
+                The `placeholder="Number of shares:"` text is shown inside the input field as a hint to the user.
+                The `type="number"` specifies that this input field accepts numeric input.
+            -->
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Number of shares:" type="number">
         </div>
+
+        <!-- Submit button for the form -->
         <button class="btn btn-primary" type="submit">Buy stock</button>
     </form>
 {% endblock %}
