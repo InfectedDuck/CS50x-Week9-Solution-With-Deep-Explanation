@@ -5,13 +5,22 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Form for user login -->
     <form action="/login" method="post">
+        <!-- Username input field -->
         <div class="mb-3">
+            <!-- Autocomplete is off to prevent the browser from automatically filling in the username -->
+            <!-- Autofocus places the cursor in this field when the page loads -->
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
         </div>
+        
+        <!-- Password input field -->
         <div class="mb-3">
+            <!-- Password type hides the input text for security -->
             <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
         </div>
+        
+        <!-- Submit button for the form -->
         <button class="btn btn-primary" type="submit">Log In</button>
     </form>
 {% endblock %}
