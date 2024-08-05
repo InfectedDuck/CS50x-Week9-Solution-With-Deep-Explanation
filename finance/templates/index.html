@@ -5,37 +5,55 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Main heading for the page, indicating that this page shows stocks owned by the user -->
     <h1>Stocks Owned</h1>
+
+    <!-- Container to hold the table and other related elements -->
     <div class="container">
+        <!-- Inner container for styling purposes -->
         <div class="table-container">
+            <!-- Table to display stock details -->
             <table class="table table-striped">
+                <!-- Table header section -->
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Symbol</th>
-                        <th>Shares</th>
-                        <th>Price</th>
-                        <th>Total Cost</th>
-                        <th>Actions</th>
+                        <!-- Column headers for the table -->
+                        <th>ID</th> <!-- Unique identifier for each stock record -->
+                        <th>Symbol</th> <!-- Stock ticker symbol (e.g., AAPL for Apple) -->
+                        <th>Shares</th> <!-- Number of shares owned -->
+                        <th>Price</th> <!-- Price per share -->
+                        <th>Total Cost</th> <!-- Total cost of the shares (shares * price) -->
+                        <th>Actions</th> <!-- Actions available for each stock (buy/sell) -->
                     </tr>
                 </thead>
+                <!-- Table body section where stock data will be displayed -->
                 <tbody>
+                    <!-- Loop through each stock item in the stocks list -->
                     {% for stock in stocks %}
                     <tr>
-                        <td>{{ stock.id }}</td>
-                        <td>{{ stock.symbol }}</td>
-                        <td>{{ stock.shares }}</td>
-                        <td>{{ stock.price | usd }}</td>
-                        <td>{{ stock.total_cost | usd }}</td>
+                        <!-- Displaying each attribute of the stock in the table row -->
+                        <td>{{ stock.id }}</td> <!-- Stock record ID -->
+                        <td>{{ stock.symbol }}</td> <!-- Stock symbol -->
+                        <td>{{ stock.shares }}</td> <!-- Number of shares owned -->
+                        <td>{{ stock.price | usd }}</td> <!-- Price per share, formatted as USD -->
+                        <td>{{ stock.total_cost | usd }}</td> <!-- Total cost, formatted as USD -->
                         <td>
+                            <!-- Form to handle selling stocks -->
                             <form action="/sell" method="POST" style="display:inline;">
+                                <!-- Hidden input to pass the stock symbol to the server -->
                                 <input type="hidden" name="symbol" value="{{ stock.symbol }}">
+                                <!-- Input field to specify the number of shares to sell -->
                                 <input type="number" name="shares" min="1" max="{{ stock.shares }}" required>
+                                <!-- Submit button to initiate the sell action -->
                                 <button type="submit">Sell stock</button>
                             </form>
+                            <!-- Form to handle buying stocks -->
                             <form action="/buy" method="POST" style="display:inline;">
+                                <!-- Hidden input to pass the stock symbol to the server -->
                                 <input type="hidden" name="symbol" value="{{ stock.symbol }}">
+                                <!-- Input field to specify the number of shares to buy -->
                                 <input type="number" name="shares" min="1" required>
+                                <!-- Submit button to initiate the buy action -->
                                 <button type="submit">Buy stock</button>
                             </form>
                         </td>
@@ -45,6 +63,9 @@
             </table>
         </div>
     </div>
+
+    <!-- Display the current balance available to the user -->
     <p>Current Balance: {{ cash | usd }}</p>
+    <!-- Display the total value of stocks and cash combined -->
     <p>Total Value of stocks and cash: {{ total_net_worth | usd }}</p>
 {% endblock %}
