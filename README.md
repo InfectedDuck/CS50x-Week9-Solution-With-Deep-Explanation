@@ -61,7 +61,7 @@ The `birthdays` program is a simple Flask web application that allows users to a
         <li><strong>Course:</strong> CS50x: Introduction to Computer Science</li>
         <li><strong>Institution:</strong> Harvard University</li>
         <li><strong>Instructor:</strong> David J. Malan</li>
-        <li><strong>Website:</strong> [CS50x Official Site](https://cs50.harvard.edu/x/2024/)</li>
+        <li><strong>Website:</strong> <a href="https://cs50.harvard.edu/x/2024/">CS50x Official Site</a></li>
       </ul>
       <p>Thank you to the CS50x team for providing such a comprehensive and engaging introduction to computer science.</p>
     </td>
