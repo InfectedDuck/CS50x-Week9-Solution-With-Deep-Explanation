@@ -53,7 +53,7 @@ The `birthdays` program is a simple Flask web application that allows users to a
 
 <table>
   <tr>
-    <td><img src="https://cs50.harvard.edu/x/2024/assets/course/cs50x.png" alt="CS50 Logo" width="300"></td>
+    <td><img src="images/CS50x_logo" alt="CS50 Logo" width="300"></td>
     <td>
       <h3>Credits to CS50x</h3>
       <p>This project was inspired by and developed as part of the CS50x course offered by Harvard University. CS50x is Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience.</p>
