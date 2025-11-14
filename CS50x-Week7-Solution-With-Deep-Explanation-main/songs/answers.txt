@@ -1,0 +1,14 @@
+    1.If they have access to the top 100 songs of the person, they may recommend some songs based on the averages of those variables like energy.
+If the person loved songs with the high levels of energy, it can be said that the person loves high-intensed and dynamic music.
+By calculating others, and just recommending songs with the most close values, spotify can make a good playlist for the person.
+User may like high energic, but with low valence and low danceability, and spotify will search what songs have closest variables to those.
+For instance, if he has average of 0.33 valence, and 0.88 energy, songs will be suggested with 0.34 valence and 0.87 energy.
+    2.Firstly, maybe the tastes of the person have changed very much, during the last year, so he may not like the songs with high energy, as he liked
+last year. Secondly, only the averages of those variables may not really help the person, as he may like songs with both low and high danceability,
+not just only medium danceability. Thirdly, music can be listened during work outs, studying, or just chilling, so it is not really good choice
+to collect all music in one, not only activity, but also the time of the day may affect. How could the sad music being listened at the romantic
+night could be in one place with the energetic music that is played during the day? Therefore, it is not really correct to parse all those
+songs just by analyzing variables. However, I propose that to make a good playlist analysis of daily activity and daytime is necessary,
+maybe using an AI that will analyze the given information and divide the songs to the group of studying, working out, playing groups will be
+much more efficient. Like, putting all the playlist with those groups maybe some others like nightly romantic, or daily active playlists into one
+playlist of wrapped, so that the person can choose the playlist based on the activity he is doing.
