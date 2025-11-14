@@ -1,0 +1,17 @@
+sort1 uses: Bubble Sort
+
+How do I know?: Bubble sort is known for its simple approach to sorting. It repeatedly steps through the list, compares adjacent items, and swaps them if they are in the wrong order. This process is repeated until no more swaps are needed, which means the list is sorted.
+
+The key characteristic of bubble sort is that it has a best-case time complexity of O(n) when the list is already sorted. In our tests, when the array was sorted, bubble sort took only 1.724 seconds to run. This is quite fast compared to the time it took to sort a random (6.635 seconds) or a reversed (6.1 seconds) array. The fact that bubble sort is significantly faster on the already sorted list suggests it is bubble sort, as its performance improves in this best-case scenario.
+
+sort2 uses: Merge Sort
+
+How do I know?: Merge sort is a highly efficient sorting algorithm with a time complexity of O(nlogn). It works by dividing the list into smaller parts, sorting each part, and then merging the sorted parts back together. This method ensures that merge sort performs consistently well regardless of the initial arrangement of the data.
+
+In our tests, merge sort had very consistent and fast performance: 1.4 seconds for random data, 1.39 seconds for sorted data, and 1.32 seconds for reversed data. The nearly identical times across different scenarios show that merge sort’s performance remains stable and efficient. This behavior matches the known characteristics of merge sort.
+
+sort3 uses: Selection Sort
+
+How do I know?: Selection sort is a straightforward algorithm that repeatedly finds the minimum element from the unsorted portion of the list and moves it to the beginning. Unlike bubble sort, selection sort always takes O(n^2) time, regardless of the initial order of the list.
+
+In our tests, selection sort had a time of 3.7 seconds for random data, 3.3 seconds for sorted data, and 3.5 seconds for reversed data. This consistent performance across different scenarios (sorted, random, and reversed) reflects its 𝑂(𝑛^2) time complexity. Additionally, selection sort is faster than bubble sort for random data because it does fewer comparisons and swaps, but it remains slower than merge sort because of its inherent time complexity.
