@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- The <link> element is used to link external resources to the document -->
+        <!-- This link imports the Montserrat font from Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <!-- This link imports the external CSS file for styling the page -->
+        <link href="styles.css" rel="stylesheet">
+        <!-- Sets the title of the webpage, which appears in the browser tab -->
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <!-- Header section for the trivia application -->
+        <div class="header">
+            <!-- Main title of the trivia application -->
+            <h1>Trivia!</h1>
+        </div>
+
+        <!-- Main content container for the trivia questions -->
+        <div class="container">
+            <!-- Section for the multiple choice questions -->
+            <div class="section">
+                <!-- Section heading for Part 1 of the trivia -->
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Question for Part 1 -->
+                <h3>Capital city of Kazakhstan?</h3>
+                <!-- Unordered list containing multiple choice answers -->
+                <ul class="list_of_buttons">
+                    <!-- Each <li> contains a button that triggers a JavaScript function on click -->
+                    <li><button class="answer" onclick="checkbutans('incorrect',this)">Nur-Sultan</button></li>
+                    <li><button class="answer" onclick="checkbutans('correct',this)">Astana</button></li>
+                    <li><button class="answer" onclick="checkbutans('incorrect',this)">NurSultan</button></li>
+                    <li><button class="answer" onclick="checkbutans('incorrect',this)">Akmola</button></li>
+                    <li><button class="answer" onclick="checkbutans('incorrect',this)">Almaty</button></li>
+                    <li><button class="answer" onclick="checkbutans('incorrect',this)">Capital</button></li>
+                </ul>
+                <!-- Placeholder for feedback messages -->
+                <div class="feedback"></div>
+            </div>
+
+            <!-- Section for the free response questions -->
+            <div class="section">
+                <!-- Section heading for Part 2 of the trivia -->
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Question for Part 2 -->
+                <h3>Who is the author of The path of Abai?</h3>
+                <!-- Input field for user response -->
+                <input type='text' id='response'>
+                <!-- Submit button for the free response question -->
+                <button class="ans" onclick="checktextans()">Submit</button>
+                <!-- Placeholder for feedback messages -->
+                <p id="part2res"></p>
+            </div>
+        </div>
+    </body>
+    <script>
+        // Function to handle multiple choice answer checking
+        function checkbutans(answer, button) {
+            // Clear previous results to ensure only the current feedback is shown
+            clearPreviousResults();
+            
+            // Create a new paragraph element for displaying the result
+            const result = document.createElement('p');
+            
+            // Check if the selected answer is correct
+            if (answer === "correct") {
+                // Add the 'Correct' class to the button for styling
+                button.classList.add("Correct");
+                // Set the result text to indicate correctness
+                result.textContent = "Correct!";
+            } else {
+                // Add the 'Incorrect' class to the button for styling
+                button.classList.add("Incorrect");
+                // Set the result text to indicate incorrectness
+                result.textContent = 'Incorrect!';
+            }
+            
+            // Append the result paragraph to the parent of the button (which is the <li>)
+            button.parentNode.appendChild(result);
+        }
+
+        // Function to clear previous feedback results
+        function clearPreviousResults() {
+            // Select all buttons with the class 'answer'
+            const buttons = document.querySelectorAll(".answer");
+            // Iterate over each button
+            buttons.forEach(button => {
+                // Remove 'Incorrect' and 'Correct' classes to reset button styles
+                button.classList.remove('Incorrect', 'Correct');
+                // Select and remove any previous feedback paragraphs associated with this button
+                const siblingRes = button.parentNode.querySelector('p.feedback');
+                if (siblingRes) {
+                    siblingRes.remove();
+                }
+            });
+        }
+
+        // Function to check the answer for the free response question
+        function checktextans() {
+            // Get the input field element
+            const input = document.getElementById('response');
+            // Get the paragraph element for displaying the result
+            const result = document.getElementById('part2res');
+            // Clear any previous result text
+            result.innerHTML = '';
+            
+            // Check if the input value matches the expected answer (case-insensitive)
+            if (input.value.trim().toLowerCase() === 'mukhtar auezov') {
+                // Add the 'Correct' class to the input field for styling
+                input.classList.add('Correct');
+                // Remove the 'Incorrect' class if it was previously added
+                input.classList.remove('Incorrect');
+                // Set the result text to indicate correctness
+                result.textContent = 'Correct!';
+            } else {
+                // Add the 'Incorrect' class to the input field for styling
+                input.classList.add('Incorrect');
+                // Remove the 'Correct' class if it was previously added
+                input.classList.remove('Correct');
+                // Set the result text to indicate incorrectness
+                result.textContent = 'Incorrect!';
+            }
+        }
+    </script>
+</html>

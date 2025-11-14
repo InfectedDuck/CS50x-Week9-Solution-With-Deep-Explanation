@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Toktar Kametay</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project Details</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <img src="images/profile.jpg" alt="Profile Image">
+        <h1>Toktar Kametay</h1>
+        <p>Experienced software developer with a passion for building innovative applications. Specializes in full-stack development, with a focus on creating efficient and scalable solutions.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Task Manager App</h3>
+            <p>A web application for managing tasks and projects. Features include user authentication, task categorization, and real-time notifications.</p>
+        </div>
+        <div class="project">
+            <h3>Weather Dashboard</h3>
+            <p>An interactive dashboard that provides weather forecasts and historical data. Integrates with various weather APIs to deliver accurate information.</p>
+        </div>
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio website showcasing projects and skills. Includes a responsive design and interactive elements for better user engagement.</p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <img src="images/skill1.png" alt="Skill 1 Logo">
+            <p>JavaScript - 5 years</p>
+        </div>
+        <div class="skill">
+            <img src="images/skill2.png" alt="Skill 2 Logo">
+            <p>Python - 4 years</p>
+        </div>
+        <div class="skill">
+            <img src="images/skill3.png" alt="Skill 3 Logo">
+            <p>React - 3 years</p>
+        </div>
+    </section>
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        <div class="recommendation">
+            <p>"Toktar is a highly skilled developer who consistently delivers high-quality work. His problem-solving abilities are exceptional."</p>
+            <p>- Tayapbergenova Anar</p>
+        </div>
+        <div class="recommendation">
+            <p>"I had the pleasure of working with Toktar on several projects. His attention to detail and dedication to excellence are truly impressive."</p>
+            <p>- Kelsingazin Alikhan</p>
+        </div>
+        <div class="recommendation">
+            <p>"Toktar's expertise in coding and project management significantly contributed to the success of our team. Highly recommended!"</p>
+            <p>- Amirbekov Miras</p>
+        </div>
+        <button id="addRecommendation">Add Recommendation</button>
+        <div id="recommendationForm" style="display:none;">
+            <textarea id="newRecommendation" placeholder="Enter your recommendation"></textarea>
+            <button id="submitRecommendation">Submit</button>
+        </div>
+    </section>
+    <footer>
+        <a href="#home" id="homeIcon">Home</a>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

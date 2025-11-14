@@ -1,0 +1,106 @@
+/* The body rule defines the overall styling for the webpage's body element. */
+body {
+    background-color: #fff; /* Sets the background color of the page to white. */
+    color: #212529; /* Defines the text color throughout the page to a dark gray, making it readable against the white background. */
+    font-size: 1rem; /* Sets the base font size to 1 rem unit (relative to the root font size, usually 16px). */
+    font-weight: 400; /* Applies a normal font weight (400) to the text, giving it a regular thickness. */
+    line-height: 1.5; /* Sets the line height to 1.5 times the font size, improving readability by providing adequate space between lines. */
+    margin: 0; /* Removes default margin around the body element, ensuring that content aligns precisely with the edges of the viewport. */
+    text-align: left; /* Aligns text to the left, which is typical for left-to-right languages. */
+}
+
+/* Styles for the list of buttons, removing default list styling and aligning buttons horizontally. */
+.list_of_buttons {
+    list-style-type: none; /* Removes default list styling such as bullet points or numbers. */
+    padding: 0; /* Removes default padding applied to lists. */
+    margin: 0; /* Removes default margin applied to lists. */
+    display: flex; /* Uses Flexbox to arrange list items in a horizontal row. */
+}
+
+/* Styles for individual list items within the list of buttons. */
+.list_of_buttons li {
+    margin-right: 15px; /* Adds space between list items, creating separation. */
+}
+
+/* Container class for centralizing and limiting the width of the content. */
+.container {
+    max-width: 800px; /* Sets a maximum width of 800 pixels for the container, ensuring it does not exceed this width. */
+    margin-left: auto; /* Centers the container horizontally by setting left margin to auto. */
+    margin-right: auto; /* Centers the container horizontally by setting right margin to auto. */
+    padding-left: 15px; /* Adds padding of 15 pixels to the left inside the container for spacing. */
+    padding-right: 15px; /* Adds padding of 15 pixels to the right inside the container for spacing. */
+}
+
+/* Styles for the header section of the page. */
+.header {
+    background-color: #477bff; /* Sets the background color of the header to a shade of blue. */
+    color: #fff; /* Sets the text color of the header to white for contrast against the blue background. */
+    margin-bottom: 2rem; /* Adds space below the header to separate it from the following content. */
+    padding: 2rem 1rem; /* Adds padding of 2 rem units top and bottom, and 1 rem unit left and right, creating space inside the header. */
+    text-align: center; /* Centers the text within the header element. */
+}
+
+/* Styles for general sections within the page. */
+.section {
+    padding: 0.5rem 2rem 1rem 2rem; /* Adds padding with 0.5 rem at the top, 2 rem on the left and right, and 1 rem at the bottom. */
+}
+
+/* Styles for sections on hover, improving visual feedback. */
+.section:hover {
+    background-color: #f5f5f5; /* Changes the background color to a light gray when the section is hovered over. */
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out; /* Adds smooth transitions for color and background-color changes. */
+}
+
+/* Styles for the main heading (h1) of the page. */
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Applies the Montserrat font family to the heading for a modern look. */
+    font-size: 48px; /* Sets the font size of the heading to 48 pixels, making it prominent. */
+}
+
+/* Styles for buttons and submit inputs to give them a uniform appearance. */
+button, input[type="submit"] {
+    background-color: #d9edff; /* Sets a light blue background color for buttons and submit inputs. */
+    border: 1px solid transparent; /* Creates a border that is initially transparent, allowing for a consistent button size. */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button, indicating that it's clickable. */
+    border-radius: 0.25rem; /* Applies a small border radius to create rounded corners on buttons and inputs. */
+    font-size: 0.95rem; /* Sets the font size slightly smaller than the base font size. */
+    font-weight: 400; /* Applies normal font weight to the text within buttons and inputs. */
+    line-height: 1.5; /* Ensures the text inside buttons and inputs has a line height of 1.5 times the font size. */
+    padding: 0.375rem 0.75rem; /* Adds padding inside the buttons and inputs for better spacing and appearance. */
+    text-align: center; /* Centers the text inside the buttons and inputs. */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Adds smooth transitions for color, background-color, border-color, and box-shadow changes. */
+    vertical-align: middle; /* Aligns the button and input elements vertically in the middle of the line. */
+}
+
+/* Styles for text input fields. */
+input[type="text"] {
+    line-height: 1.8; /* Sets the line height for text input fields to 1.8 times the font size, improving readability. */
+    width: 25%; /* Sets the width of the text input fields to 25% of their container. */
+}
+
+/* Styles for text input fields on hover. */
+input[type="text"]:hover {
+    background-color: #f5f5f5; /* Changes the background color to light gray when the text input is hovered over. */
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out; /* Adds smooth transitions for color and background-color changes. */
+}
+
+/* Styles for buttons on hover. */
+button:hover {
+    background-color: #bbb; /* Changes the background color to a light gray when the button is hovered over. */
+}
+
+/* Styles for elements with the class "Correct". */
+.Correct {
+    background-color: #4CAF50; /* Sets a green background color, typically used to indicate correctness or success. */
+}
+
+/* Styles for elements with the class "Incorrect". */
+.Incorrect {
+    background-color: #f44336; /* Sets a red background color, typically used to indicate errors or failures. */
+}
+
+/* Styles for feedback elements. */
+.feedback {
+    font-weight: bold; /* Makes the font weight bold to emphasize feedback text. */
+    margin-top: 10px; /* Adds space above the feedback text to separate it from other elements. */
+}
